@@ -42,3 +42,5 @@ def taylor_second_order_pendulum(theta0, omega0, h, t_max):
         omega_values.append(omega_next)
     
     return t_values, theta_values, omega_values
+
+t_values, theta_values, omega_values = taylor_second_order_pendulum(theta0, omega0, h, t_max)
