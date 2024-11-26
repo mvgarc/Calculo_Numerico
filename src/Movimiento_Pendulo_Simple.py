@@ -44,3 +44,23 @@ def taylor_second_order_pendulum(theta0, omega0, h, t_max):
     return t_values, theta_values, omega_values
 
 t_values, theta_values, omega_values = taylor_second_order_pendulum(theta0, omega0, h, t_max)
+
+# Gráfico de θ(t)
+plt.subplot(2, 1, 1)
+plt.plot(t_values, theta_values, label=r"$\theta(t)$ (Ángulo)", color="blue", marker='o')
+plt.title("Movimiento de un Péndulo Simple")
+plt.xlabel("Tiempo (s)")
+plt.ylabel(r"Ángulo $\theta$ (rad)")
+plt.grid()
+plt.legend()
+
+# Gráfico de ω(t)
+plt.subplot(2, 1, 2)
+plt.plot(t_values, omega_values, label=r"$\omega(t)$ (Velocidad angular)", color="red", marker='x')
+plt.xlabel("Tiempo (s)")
+plt.ylabel(r"Velocidad angular $\omega$ (rad/s)")
+plt.grid()
+plt.legend()
+
+plt.tight_layout()
+plt.show()
