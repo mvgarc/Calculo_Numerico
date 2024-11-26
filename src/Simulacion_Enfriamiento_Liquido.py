@@ -30,3 +30,13 @@ def taylor_second_order(T0, T_amb, k, h, t_max):
     return t_values, T_values
 
 t_values, T_values = taylor_second_order(T0, T_amb, k, h, t_max)
+
+plt.figure(figsize=(10, 6))
+plt.plot(t_values, T_values, label="Temperatura del café (Taylor 2° Orden)", marker='o')
+plt.axhline(y=T_amb, color='r', linestyle='--', label="Temperatura Ambiente (T_amb)")
+plt.title("Enfriamiento del Café - Ley de Enfriamiento de Newton")
+plt.xlabel("Tiempo (min)")
+plt.ylabel("Temperatura (°C)")
+plt.legend()
+plt.grid()
+plt.show()
