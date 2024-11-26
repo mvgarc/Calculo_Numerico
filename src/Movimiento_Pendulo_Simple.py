@@ -7,3 +7,12 @@ theta0 = 0.2  # Ángulo inicial (rad)
 omega0 = 0.0  # Velocidad angular inicial (rad/s)
 h = 0.1  # Tamaño del paso (s)
 t_max = 10.0  # Tiempo máximo (s)
+
+def dtheta_dt(omega):
+    return omega
+
+def domega_dt(theta):
+    return -(g / L) * theta
+
+def d2theta_dt2(theta):
+    return -(g / L) * dtheta_dt(theta)
