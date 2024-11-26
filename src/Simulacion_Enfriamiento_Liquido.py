@@ -13,3 +13,7 @@ def dT_dt(T):
 
 def d2T_dt2(T):
     return -k * dT_dt(T)
+
+def taylor_second_order(T0, T_amb, k, h, t_max):
+    t_values = np.arange(0, t_max + h, h)
+    T_values = [T0]
