@@ -17,3 +17,14 @@ def d2T_dt2(T):
 def taylor_second_order(T0, T_amb, k, h, t_max):
     t_values = np.arange(0, t_max + h, h)
     T_values = [T0]
+
+    for i in range(1, len(t_values)):
+        T_prev = T_values[-1]
+        T_next = (
+            T_prev 
+            + h * dT_dt(T_prev) 
+            + (h**2 / 2) * d2T_dt2(T_prev)
+        )
+        T_values.append(T_next)
+    
+    return t_values, T_values
