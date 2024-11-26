@@ -72,4 +72,22 @@ Para ejecutar estos ejercicios, asegúrate de tener instaladas las siguientes li
 Puedes instalar estas librerías utilizando pip:
         pip install numpy matplotlib
 
+## Ejecución
 
+1. Clona o descarga este repositorio en tu máquina local.
+2. Abre el archivo correspondiente a cada ejercicio (por ejemplo, `Movimiento_Pendulo_Simple.py` o `Simulacion_Enfriamiento_Liquido.py`).
+3. Ejecuta el archivo en tu entorno de Python.
+
+El código generará los gráficos correspondientes y te permitirá visualizar la solución numérica para ambos problemas.
+
+---
+
+## Contribuciones
+
+Este repositorio es de código abierto. Si tienes sugerencias de mejoras o deseas contribuir, no dudes en abrir un **pull request**.
+
+---
+
+## Licencia
+
+Este repositorio está bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
