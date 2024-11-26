@@ -28,3 +28,5 @@ def taylor_second_order(T0, T_amb, k, h, t_max):
         T_values.append(T_next)
     
     return t_values, T_values
+
+t_values, T_values = taylor_second_order(T0, T_amb, k, h, t_max)
