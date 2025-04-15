@@ -38,3 +38,23 @@ class HermiteInterpolation:
             result += self.Q[i][i] * term
 
         return result
+    
+    def print_polynomial(self):
+        """Imprime la tabla de diferencias divididas y construye el polinomio en formato legible."""
+        print("Tabla de diferencias divididas de Hermite:")
+        for i in range(2 * self.n):
+            print(f"{self.z[i]:.5f}", end="  ")
+            for j in range(i + 1):
+                print(f"{self.Q[i][j]:.5f}", end="  ")
+            print()
+
+        print("\nPolinomio interpolador de Hermite:")
+        terms = []
+        term_expr = "1"
+        for i in range(2 * self.n):
+            coef = self.Q[i][i]
+            if coef != 0:
+                if i > 0:
+                    term_expr += f" * (x - {self.z[i - 1]})"
+                terms.append(f"{coef:.5f} * {term_expr}")
+        print("H(x) =", " + ".join(terms))
