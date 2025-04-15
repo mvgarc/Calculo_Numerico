@@ -18,9 +18,9 @@ df = df.dropna()  # Se eliminan filas con valores nulos (puedes cambiar por fill
 df['fecha'] = pd.to_datetime(df['fecha'], format='%Y-%m-%d')
 
 # 2. Analisis de temperatura
-temp_max = df['Temperature'].max()
-temp_min = df['Temperature'].min()
-temp_mean = df['Temperature'].mean()
+temp_max = df['tmax'].max()
+temp_min = df['tmin'].min()
+temp_mean = df[''].mean()
 temp_range = temp_max - temp_min
 
 fecha_max = df[df['Temperature'] == temp_max]['fecha'].values[0]
