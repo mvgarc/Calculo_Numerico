@@ -1,0 +1,31 @@
+Evaluación: Análisis y Visualización de Datos Climáticos con Pandas y Matplotlib
+
+A continuación, se te proporciona un dataset meteorológico que contiene registros diarios del clima en la provincia de Cantabria. Utilizando Python, y las bibliotecas Pandas, Matplotlib y Seaborn, deberás realizar un análisis exploratorio y visual de los datos.
+
+✅ Instrucciones:
+Carga los datos desde el siguiente enlace:
+https://raw.githubusercontent.com/CAChemE/curso-python-datos/master/data/weather_data.csv
+
+Limpia el dataset, identificando y tratando los valores nulos de manera adecuada.
+
+Convierte la columna fecha a tipo datetime.
+
+Calcula e imprime:
+
+La temperatura media del período registrado.
+
+La temperatura máxima y la fecha en la que ocurrió.
+
+La temperatura mínima y la fecha en la que ocurrió.
+
+El rango de temperatura (máxima - mínima).
+
+Visualiza la información mediante:
+
+Un gráfico de líneas que muestre la evolución de la temperatura máxima y mínima a lo largo del tiempo.
+
+Un boxplot de la temperatura media.
+
+Un mapa de calor con la matriz de correlaciones entre variables climáticas relevantes.
+
+Un diagrama de dispersión (pairplot) entre al menos cuatro variables.
