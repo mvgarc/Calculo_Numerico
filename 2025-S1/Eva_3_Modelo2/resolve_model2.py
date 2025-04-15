@@ -39,3 +39,19 @@ class LagrangeInterpolation:
             x_vals.append(x_actual)
             y_vals.append(self.interpolate(x_actual))
             x_actual += paso  # Ojito: Incremento manual sin NumPy
+
+        # Graficamos la interpolación
+        plt.figure(figsize=(8, 5))
+        plt.plot(x_vals, y_vals, label="Interpolación de Lagrange", color="blue")
+        plt.scatter(*zip(*self.puntos), color="red", label="Puntos dados", zorder=3)
+        plt.xlabel("x")
+        plt.ylabel("y")
+        plt.title("Interpolación de Lagrange")
+        plt.legend()
+        plt.grid(True)
+        plt.show()
+
+# Ejemplo de uso:
+puntos = [(1, 2), (3, 6), (5, 5), (7, 10), (9, 8)]
+interpolador = LagrangeInterpolation(puntos)
+interpolador.plot()
