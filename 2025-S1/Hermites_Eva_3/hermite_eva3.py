@@ -26,3 +26,15 @@ class HermiteInterpolation:
         for i in range(2, 2 * self.n):
             for j in range(2, i + 1):
                 self.Q[i][j] = (self.Q[i][j - 1] - self.Q[i - 1][j - 1]) / (self.z[i] - self.z[i - j])
+
+    def evaluate(self, x_eval):
+        """Evalúa el polinomio interpolador en x_eval usando la forma de Newton."""
+        n = len(self.z)
+        result = self.Q[0][0]
+        term = 1.0
+
+        for i in range(1, n):
+            term *= (x_eval - self.z[i - 1])
+            result += self.Q[i][i] * term
+
+        return result
