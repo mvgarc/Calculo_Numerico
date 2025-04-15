@@ -1,7 +1,7 @@
 
 # Cálculo Numérico - Evaluaciones resueltas por el Docente
 
-Este repositorio contiene las evaluaciones, soluciones y recursos utilizados en el curso de **Cálculo Numérico** dictado en la universidad por la Prof. María García.
+Este repositorio contiene las evaluaciones, soluciones y recursos utilizados en el curso de **Cálculo Numérico** dictado en la UJAP por la Prof. María García.
 
 ## 📁 Estructura del Repositorio
 
