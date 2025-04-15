@@ -58,3 +58,31 @@ class HermiteInterpolation:
                     term_expr += f" * (x - {self.z[i - 1]})"
                 terms.append(f"{coef:.5f} * {term_expr}")
         print("H(x) =", " + ".join(terms))
+
+# Datos de prueba (los de la imagen)
+x_values = [1, 2, 3, 4, 5]
+y_values = [2, 3, 6, 5, 5]
+derivatives = [1, -1, 0, -2, 1]
+
+hermite = HermiteInterpolation(x_values, y_values, derivatives)
+
+# Imprimir puntos y polinomio
+print("Puntos dados:")
+for i in range(len(x_values)):
+    print(f"x = {x_values[i]}, f(x) = {y_values[i]}, f'(x) = {derivatives[i]}")
+print()
+hermite.print_polynomial()
+
+# Graficar la interpolación
+x_plot = [i / 10.0 for i in range(10, 51)]  # Más puntos para mayor precisión
+y_plot = [hermite.evaluate(x) for x in x_plot]
+
+plt.figure(figsize=(8, 6))
+plt.plot(x_plot, y_plot, label="Interpolación de Hermite", color="blue")
+plt.scatter(x_values, y_values, color="red", label="Puntos dados")
+plt.xlabel("x")
+plt.ylabel("f(x)")
+plt.title("Interpolación de Hermite")
+plt.legend()
+plt.grid(True)
+plt.show()
