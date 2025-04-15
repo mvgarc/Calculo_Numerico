@@ -15,4 +15,4 @@ print(df.isnull().sum())
 df = df.dropna()  # Se eliminan filas con valores nulos (puedes cambiar por fillna si prefieres)
 
 # Convertir columna de fecha a tipo datetime
-df['Date'] = pd.to_datetime(df['Date'])
+df['fecha'] = pd.to_datetime(df['fecha'], format='%Y-%m-%d')
