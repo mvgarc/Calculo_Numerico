@@ -17,3 +17,10 @@ class LagrangeInterpolation:
                 denominador *= (xi - xj)
 
         return numerador / denominador
+
+    def interpolate(self, x):
+        """Evalúa el polinomio interpolador en el punto x."""
+        resultado = 0
+        for i in range(len(self.puntos)):
+            resultado += self.puntos[i][1] * self.lagrange_basis(x, i)
+        return resultado
