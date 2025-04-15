@@ -24,3 +24,18 @@ class LagrangeInterpolation:
         for i in range(len(self.puntos)):
             resultado += self.puntos[i][1] * self.lagrange_basis(x, i)
         return resultado
+
+    def plot(self):
+        """Grafica la interpolación junto con los puntos dados."""
+        # Generamos puntos para la curva interpolada
+        x_min = min(self.puntos, key=lambda p: p[0])[0]
+        x_max = max(self.puntos, key=lambda p: p[0])[0]
+        paso = 0.1  # Ajusta el paso para mayor o menor suavidad de la curva
+
+        x_vals = []
+        y_vals = []
+        x_actual = x_min
+        while x_actual <= x_max:
+            x_vals.append(x_actual)
+            y_vals.append(self.interpolate(x_actual))
+            x_actual += paso  # Ojito: Incremento manual sin NumPy
