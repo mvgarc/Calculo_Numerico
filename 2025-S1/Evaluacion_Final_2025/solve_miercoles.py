@@ -28,3 +28,8 @@ class ReglaTrapecio:
 
         integral_aproximada = (h / 2) * suma
         return integral_aproximada
+    
+# Definimos la función a integrar fuera de la clase (podría ser un método de otra clase si fuera más complejo)
+def funcion_a_integrar(x):
+    """Función matemática que se va a integrar."""
+    return x**2 + 1
