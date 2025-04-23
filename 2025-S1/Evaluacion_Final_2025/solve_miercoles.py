@@ -33,3 +33,17 @@ class ReglaTrapecio:
 def funcion_a_integrar(x):
     """Función matemática que se va a integrar."""
     return x**2 + 1
+
+# Creamos una instancia de la clase ReglaTrapecio, pasando la función a integrar
+integrador = ReglaTrapecio(funcion_a_integrar)
+
+# Definimos los parámetros de la integral
+limite_inferior = 0
+limite_superior = 2
+numero_trapecios = 4
+
+# Calculamos la aproximación utilizando el método 'integrar' del objeto
+aproximacion = integrador.integrar(limite_inferior, limite_superior, numero_trapecios)
+
+# Imprimimos el resultado
+print(f"La aproximación de la integral utilizando la Regla del Trapecio con {numero_trapecios} trapecios es: {aproximacion}")
