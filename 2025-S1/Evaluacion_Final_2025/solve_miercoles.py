@@ -46,4 +46,4 @@ numero_trapecios = 4
 aproximacion = integrador.integrar(limite_inferior, limite_superior, numero_trapecios)
 
 # Imprimimos el resultado
-print(f"La aproximación de la integral utilizando la Regla del Trapecio con {numero_trapecios} trapecios es: {aproximacion}")
+print(f"La aproximacion de la integral utilizando la Regla del Trapecio con {numero_trapecios} trapecios es: {aproximacion}")
